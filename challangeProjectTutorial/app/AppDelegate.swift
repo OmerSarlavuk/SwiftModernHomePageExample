@@ -1,8 +1,8 @@
 //
-//  AppDelegate.swift
+//  tabBarViewComponent.swift
 //  challangeProjectTutorial
 //
-//  Created by Ahlatci on 18.04.2024.
+//  Created by Ö.Ş on 18.04.2024.
 //
 
 import UIKit

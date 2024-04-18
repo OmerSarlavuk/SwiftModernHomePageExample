@@ -13,6 +13,14 @@
 		FB24CC272BD108D500ED8822 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB24CC262BD108D500ED8822 /* Base */; };
 		FB24CC292BD108D700ED8822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB24CC282BD108D700ED8822 /* Assets.xcassets */; };
 		FB24CC2C2BD108D700ED8822 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB24CC2B2BD108D700ED8822 /* Base */; };
+		FB24CC402BD109F100ED8822 /* selectImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC3C2BD109F100ED8822 /* selectImages.swift */; };
+		FB24CC472BD10A1600ED8822 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC432BD10A1600ED8822 /* Images.swift */; };
+		FB24CC492BD10EDB00ED8822 /* topViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC482BD10EDB00ED8822 /* topViewComponent.swift */; };
+		FB24CC4B2BD10F3E00ED8822 /* cardViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC4A2BD10F3E00ED8822 /* cardViewComponent.swift */; };
+		FB24CC4D2BD10F6000ED8822 /* profilesViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC4C2BD10F6000ED8822 /* profilesViewComponent.swift */; };
+		FB24CC4F2BD10F8300ED8822 /* tabBarViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC4E2BD10F8300ED8822 /* tabBarViewComponent.swift */; };
+		FB24CC522BD13B3400ED8822 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB24CC512BD13B3400ED8822 /* SnapKit */; };
+		FB24CC552BD1578100ED8822 /* cardViewComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24CC542BD1578100ED8822 /* cardViewComponentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		FB24CC282BD108D700ED8822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB24CC2B2BD108D700ED8822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB24CC2D2BD108D700ED8822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB24CC3C2BD109F100ED8822 /* selectImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectImages.swift; sourceTree = "<group>"; };
+		FB24CC432BD10A1600ED8822 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		FB24CC482BD10EDB00ED8822 /* topViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topViewComponent.swift; sourceTree = "<group>"; };
+		FB24CC4A2BD10F3E00ED8822 /* cardViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardViewComponent.swift; sourceTree = "<group>"; };
+		FB24CC4C2BD10F6000ED8822 /* profilesViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profilesViewComponent.swift; sourceTree = "<group>"; };
+		FB24CC4E2BD10F8300ED8822 /* tabBarViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarViewComponent.swift; sourceTree = "<group>"; };
+		FB24CC542BD1578100ED8822 /* cardViewComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardViewComponentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB24CC522BD13B3400ED8822 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +72,11 @@
 		FB24CC1E2BD108D500ED8822 /* challangeProjectTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				FB24CC1F2BD108D500ED8822 /* AppDelegate.swift */,
-				FB24CC212BD108D500ED8822 /* SceneDelegate.swift */,
+				FB24CC532BD1577200ED8822 /* viewModels */,
+				FB24CC442BD10A1600ED8822 /* enums */,
+				FB24CC3D2BD109F100ED8822 /* utilities */,
+				FB24CC392BD109B700ED8822 /* components */,
+				FB24CC382BD109AE00ED8822 /* app */,
 				FB24CC232BD108D500ED8822 /* ViewController.swift */,
 				FB24CC252BD108D500ED8822 /* Main.storyboard */,
 				FB24CC282BD108D700ED8822 /* Assets.xcassets */,
@@ -65,6 +84,50 @@
 				FB24CC2D2BD108D700ED8822 /* Info.plist */,
 			);
 			path = challangeProjectTutorial;
+			sourceTree = "<group>";
+		};
+		FB24CC382BD109AE00ED8822 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				FB24CC1F2BD108D500ED8822 /* AppDelegate.swift */,
+				FB24CC212BD108D500ED8822 /* SceneDelegate.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		FB24CC392BD109B700ED8822 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				FB24CC482BD10EDB00ED8822 /* topViewComponent.swift */,
+				FB24CC4A2BD10F3E00ED8822 /* cardViewComponent.swift */,
+				FB24CC4C2BD10F6000ED8822 /* profilesViewComponent.swift */,
+				FB24CC4E2BD10F8300ED8822 /* tabBarViewComponent.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		FB24CC3D2BD109F100ED8822 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FB24CC3C2BD109F100ED8822 /* selectImages.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		FB24CC442BD10A1600ED8822 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				FB24CC432BD10A1600ED8822 /* Images.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		FB24CC532BD1577200ED8822 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB24CC542BD1578100ED8822 /* cardViewComponentViewModel.swift */,
+			);
+			path = viewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +146,9 @@
 			dependencies = (
 			);
 			name = challangeProjectTutorial;
+			packageProductDependencies = (
+				FB24CC512BD13B3400ED8822 /* SnapKit */,
+			);
 			productName = challangeProjectTutorial;
 			productReference = FB24CC1C2BD108D500ED8822 /* challangeProjectTutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +177,9 @@
 				Base,
 			);
 			mainGroup = FB24CC132BD108D500ED8822;
+			packageReferences = (
+				FB24CC502BD13B3400ED8822 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = FB24CC1D2BD108D500ED8822 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB24CC552BD1578100ED8822 /* cardViewComponentViewModel.swift in Sources */,
+				FB24CC4D2BD10F6000ED8822 /* profilesViewComponent.swift in Sources */,
+				FB24CC492BD10EDB00ED8822 /* topViewComponent.swift in Sources */,
+				FB24CC4F2BD10F8300ED8822 /* tabBarViewComponent.swift in Sources */,
 				FB24CC242BD108D500ED8822 /* ViewController.swift in Sources */,
+				FB24CC4B2BD10F3E00ED8822 /* cardViewComponent.swift in Sources */,
+				FB24CC402BD109F100ED8822 /* selectImages.swift in Sources */,
 				FB24CC202BD108D500ED8822 /* AppDelegate.swift in Sources */,
+				FB24CC472BD10A1600ED8822 /* Images.swift in Sources */,
 				FB24CC222BD108D500ED8822 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +376,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +405,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB24CC502BD13B3400ED8822 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB24CC512BD13B3400ED8822 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB24CC502BD13B3400ED8822 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB24CC142BD108D500ED8822 /* Project object */;
 }
