@@ -10,25 +10,29 @@ import SnapKit
 
 class ViewController: UIViewController {
 
-    private let topC          = topViewComponent()
-    private let c1            = cardViewComponent()
-    private let c2            = cardViewComponent()
-    private let c3            = cardViewComponent()
-    private let pc            = profilesViewComponent()
-    private let tabBarView    = tabBarViewComponent()
-    private let text1         = UILabel()
-    private let button1       = UIButton()
-    private let text2         = UILabel()
-    private let button2       = UIButton()
-    private let view1         = UIView()
-    private let view2         = UIView()
-    private let label1        = UILabel()
-    private let label2        = UILabel()
-    private let line          = UIView()
-    private let profileImage1 = UIImageView()
-    private let text11        = UILabel()
-    private let text22        = UILabel()
-    private let kk            = UIView()
+    private let topC                = topViewComponent()
+    private let c1                  = cardViewComponent()
+    private let c2                  = cardViewComponent()
+    private let c3                  = cardViewComponent()
+    private let pc                  = profilesViewComponent()
+    private let tabBarView          = tabBarViewComponent()
+    private let text1               = UILabel()
+    private let button1             = UIButton()
+    private let text2               = UILabel()
+    private let button2             = UIButton()
+    private let view1               = UIView()
+    private let view2               = UIView()
+    private let label1              = UILabel()
+    private let label2              = UILabel()
+    private let line                = UIView()
+    private let profileImage1       = UIImageView()
+    private let text11              = UILabel()
+    private let text22              = UILabel()
+    private let kk                  = UIView()
+    private let scrollView          = UIScrollView()
+    private let genelView           = UIView()
+    private let containerView       = UIView()
+    private let scrollContainerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,23 +41,26 @@ class ViewController: UIViewController {
 
     private func setupUI() {
         view.addSubview(topC)
-        view.addSubview(text1)
-        view.addSubview(button1)
-        view.addSubview(c1)
-        view.addSubview(c2)
-        view.addSubview(c3)
-        view.addSubview(text2)
-        view.addSubview(button2)
-        view.addSubview(pc)
-        view.addSubview(view1)
+        view.addSubview(scrollContainerView)
+        scrollContainerView.addSubview(scrollView)
+        scrollView.addSubview(containerView)
+        containerView.addSubview(text1)
+        containerView.addSubview(button1)
+        containerView.addSubview(c1)
+        containerView.addSubview(c2)
+        containerView.addSubview(c3)
+        containerView.addSubview(text2)
+        containerView.addSubview(button2)
+        containerView.addSubview(pc)
+        containerView.addSubview(view1)
         view1.addSubview(view2)
         view2.addSubview(label1)
         view2.addSubview(kk)
         view1.addSubview(label2)
-        view.addSubview(line)
-        view.addSubview(profileImage1)
-        view.addSubview(text11)
-        view.addSubview(text22)
+        containerView.addSubview(line)
+        containerView.addSubview(profileImage1)
+        containerView.addSubview(text11)
+        containerView.addSubview(text22)
         view.addSubview(tabBarView)
         setUI()
         setupConstraints()
@@ -97,23 +104,37 @@ class ViewController: UIViewController {
         c1.configure(viewModel: cardViewComponentViewModel(image: selectImages().selectImage(image: .i6), text1Color: .white, text1String: "5:45 PM", text2String: "Dec7", text3String: "Michael Simpson", text2Color: .white, text3Color: .white, buttonBackGroundColor: .s3, buttonTitle: "Join the call", buttonTitleColor: .white))
         c2.configure(viewModel: cardViewComponentViewModel(image: selectImages().selectImage(image: .i7), text1Color: .s3, text1String: "8:30AM", text2String: "Dec8", text3String: "Kate Brown", text2Color: .darkGray, text3Color: .s1, buttonBackGroundColor: .white, buttonTitle: "Wait for call", buttonTitleColor: .s4))
         pc.configure(i1: selectImages().selectImage(image: .plus), i2: selectImages().selectImage(image: .i1), i3: selectImages().selectImage(image: .i2), i4: selectImages().selectImage(image: .i3), i5: selectImages().selectImage(image: .i4))
+    
     }
     
     private func setupConstraints() {
         topC.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(90)
+            $0.top.equalToSuperview().offset(70)
             $0.leading.equalToSuperview().offset(32)
             $0.trailing.equalToSuperview().offset(-32)
             $0.height.equalTo(120)
         }
+        scrollContainerView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(topC.snp.bottom)
+            $0.bottom.equalTo(tabBarView.snp.top)
+        }
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        containerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalTo(view)
+            $0.height.equalTo(view)
+        }
         text1.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(16)
-            $0.top.equalTo(topC.snp.bottom).offset(6)
+            $0.top.equalTo(containerView.snp.top).offset(6)
         }
         button1.snp.makeConstraints{
             $0.width.height.equalTo(44)
             $0.trailing.equalToSuperview().offset(-16)
-            $0.top.equalTo(topC.snp.bottom)
+            $0.top.equalTo(containerView.snp.top)
         }
         c1.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(16)
@@ -194,10 +215,10 @@ class ViewController: UIViewController {
             $0.leading.equalTo(profileImage1.snp.trailing).offset(18)
         }
         tabBarView.snp.makeConstraints{
-            $0.top.equalTo(line.snp.bottom).offset(10)
+            $0.bottom.equalToSuperview()
             $0.leading.equalToSuperview().offset(32)
             $0.trailing.equalToSuperview().offset(-50)
-            $0.height.equalTo(100)
+            $0.height.equalTo(90)
         }
     }
 
